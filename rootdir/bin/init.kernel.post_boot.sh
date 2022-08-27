@@ -240,6 +240,9 @@ echo 1-2 > /dev/cpuset/audio-app/cpus
 # Set restricted cpuset to the same CPUs as system-background
 cat /dev/cpuset/system-background/cpus > /dev/cpuset/restricted/cpus
 
+# Set restricted cpuset to the same CPUs as system-background
+cat /dev/cpuset/system-background/cpus > /dev/cpuset/restricted/cpus
+
 # Configure bus-dcvs
 bus_dcvs="/sys/devices/system/cpu/bus_dcvs"
 
