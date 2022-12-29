@@ -2358,9 +2358,6 @@ vendor/lib64/libthermalclient.so|0a12301d1557583db10f730d1d3cced841448b99
 vendor/bin/thermal-engine-v2|0604595d9cc43fb992516bb322d1e2d28a52be51
 
 # Time services
-vendor/app/TimeService/TimeService.apk
-vendor/bin/time_daemon
-vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 
 # Touchfeature

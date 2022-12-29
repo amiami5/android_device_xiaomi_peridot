@@ -602,6 +602,10 @@ PRODUCT_PACKAGES += \
     libhidlbase_shim \
     libinput_shim
 
+# TimeKeep
+PRODUCT_PACKAGES += \
+    TimeKeep
+
 # Task Profiles
 PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json \

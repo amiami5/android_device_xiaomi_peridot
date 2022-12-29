@@ -18,6 +18,11 @@ echo "Cloning kernel tree..."
 rm -rf device/xiaomi/peridot-kernel
 git clone -b 16 https://github.com/sm8635-dev/device_xiaomi_peridot-kernel.git device/xiaomi/peridot-kernel
 
+# Hardwaee Sony (fresh clone)
+echo "Cloning Sony hardware..."
+rm -rf hardware/sony/timekeep
+git clone -b lineage-22.2 https://github.com/LineageOS/android_hardware_sony_timekeep.git hardware/sony/timekeep
+
 # Hardware Xiaomi (fresh clone)
 echo "Cloning Xiaomi hardware..."
 rm -rf hardware/xiaomi
