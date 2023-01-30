@@ -242,6 +242,7 @@ SYSTEMUI_OPTIMIZE_JAVA = true
 
 # Fastbootd
 PRODUCT_PACKAGES += \
+    android.hardware.fastboot-service.example_recovery \
     fastbootd
 
 # Fingerprint
