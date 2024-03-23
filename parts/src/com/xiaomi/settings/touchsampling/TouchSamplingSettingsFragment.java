@@ -26,14 +26,14 @@ import android.view.MenuItem;
 
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
-import androidx.preference.PreferenceFragment;
+import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SwitchPreferenceCompat;
 
 import com.xiaomi.settings.R;
 import com.xiaomi.settings.touchsampling.TouchSamplingUtils;
 import com.xiaomi.settings.utils.FileUtils;
 
-public class TouchSamplingSettingsFragment extends PreferenceFragment implements
+public class TouchSamplingSettingsFragment extends PreferenceFragmentCompat implements
         Preference.OnPreferenceChangeListener {
 
     private static final String HTSR_ENABLE_KEY = "htsr_enable";
