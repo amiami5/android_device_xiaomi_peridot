@@ -8,7 +8,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff.
+# Inherit some common crdroid stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from peridot device
@@ -16,6 +16,12 @@ $(call inherit-product, device/xiaomi/peridot/device.mk)
 
 # Inherit from the MiuiCamera setup
 $(call inherit-product-if-exists, device/xiaomi/peridot-miuicamera/device.mk)
+
+# GMS
+ifeq ($(WITH_GMS),true)
+$(call inherit-product-if-exists, vendor/gms/gms_full.mk)
+$(call inherit-product-if-exists, vendor/pixel-style/config/common.mk)
+endif
 
 #crdroid
 TARGET_HAS_UDFPS := true

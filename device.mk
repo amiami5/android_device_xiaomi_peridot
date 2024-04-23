@@ -198,6 +198,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
+TARGET_HAS_UDFPS := true
+
 # Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator-V1-ndk.vendor \
@@ -455,6 +457,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     rfs_msm_mpss_readonly_mbnconfig_symlink \
     rfs_msm_mpss_readonly_modem_firmware_symlink
+
+# RemovePackages
+ifeq ($(WITH_GMS),true)
+PRODUCT_PACKAGES += \
+    PixelSetupWizardOverlay \
+    RemovePackages
+endif
 
 # RenderScript
 PRODUCT_PACKAGES += \
