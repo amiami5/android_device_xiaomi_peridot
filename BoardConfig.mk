@@ -162,6 +162,9 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/touch-drivers \
     nxp/opensource/driver
 
+# MiuiCamera
+CAMERA_PACKAGE_NAME := com.android.camera
+
 # Partitions
 ifneq ($(PRODUCT_RO_FILE_SYSTEM), erofs)
 -include vendor/lineage/config/BoardConfigReservedSize.mk
