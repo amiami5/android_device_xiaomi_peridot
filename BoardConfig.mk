@@ -97,6 +97,7 @@ BOARD_KERNEL_CMDLINE := \
     swinfo.fingerprint=peridot:$(YAAP_VERSION) \
     mtdoops.fingerprint=peridot:$(YAAP_VERSION)
 
+BOARD_KERNEL_CMDLINE += rcupdate.rcu_expedited=1 rcu_nocbs=all rcutree.enable_rcu_lazy
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
