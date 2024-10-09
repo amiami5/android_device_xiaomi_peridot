@@ -1,5 +1,5 @@
-bluetooth.device.default_name=POCO F6 Deadpool Edition
-ro.product.marketname=POCO F6 Deadpool Edition
-ro.product.odm.marketname=POCO F6 Deadpool Edition
+bluetooth.device.default_name=POCO F6
+ro.product.marketname=POCO F6
+ro.product.odm.marketname=POCO F6
 ro.product.odm.model=24069PC21I
 ro.product.odm.name=peridot_in
