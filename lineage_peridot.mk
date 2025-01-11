@@ -17,18 +17,20 @@ $(call inherit-product, device/xiaomi/peridot/device.mk)
 # Inherit from the MiuiCamera setup
 $(call inherit-product-if-exists, device/xiaomi/peridot-miuicamera/device.mk)
 
+#crdroid
+TARGET_HAS_UDFPS := true
+TARGET_BOOT_ANIMATION_RES := 1080
+EXTRA_UDFPS_ANIMATIONS := true
+
+PRODUCT_SYSTEM_NAME := peridot_global
+PRODUCT_SYSTEM_DEVICE := peridot
+
 PRODUCT_NAME := lineage_peridot
 PRODUCT_DEVICE := peridot
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := 24069PC21G
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="peridot_global-user 14 UKQ1.240116.001 V816.0.12.0.UNPMIXM release-keys" \
-    BuildFingerprint=POCO/peridot_global/peridot:14/UKQ1.240116.001/V816.0.12.0.UNPMIXM:user/release-keys \
-    DeviceName=peridot
-    DeviceProduct=peridot_global \
-    SystemName=peridot_global \
-    SystemDevice=peridot
+BUILD_FINGERPRINT := POCO/peridot_global/peridot:14/UKQ1.240116.001/V816.0.12.0.UNPMIXM:user/release-keys
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
