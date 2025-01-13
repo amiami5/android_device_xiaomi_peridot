@@ -1,5 +1,9 @@
+echo "A15qpr1用指紋認証"
+cd frameworks/base && git fetch git@gitea.com:amisuke/android_frameworks_base.git 15.0 && git cherry-pick d60fa41335ea36f9b3b838bca795e89fef3972cd
+cd ../../
+
 echo "指紋認証の修正"
-cd frameworks/base && git fetch https://github.com/amiami5/android_frameworks_base 15.0 && git cherry-pick 2196c754b8f8e93050f12b60b4f3d8e7b8fa3520
+cd frameworks/base && git fetch git@gitea.com:amisuke/android_frameworks_base.git 15.0 && git cherry-pick ed3506d8d1a3ab902c66216462228afd6311838d
 cd ../../
 
 echo "updaterを自分に向ける"
