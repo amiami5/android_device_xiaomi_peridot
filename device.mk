@@ -508,6 +508,7 @@ PRODUCT_COPY_FILES += \
 
 # Shims
 PRODUCT_PACKAGES += \
+    libbinder_shim \
     libcodec2_shim \
     libgui_shim \
     libhidlbase_shim \
