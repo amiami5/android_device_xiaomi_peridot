@@ -525,6 +525,7 @@ PRODUCT_PACKAGES += \
     libgui_shim \
     libhidlbase_shim \
     libinput_shim \
+    libprocessgroup_shim \
     libwrapper_dlengine_shim
 
 # Telephony
