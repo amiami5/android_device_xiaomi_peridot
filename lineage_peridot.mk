@@ -23,6 +23,11 @@ PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := 24069PC21G
 
+#crdroid
+TARGET_HAS_UDFPS := true
+TARGET_BOOT_ANIMATION_RES := 1080
+EXTRA_UDFPS_ANIMATIONS := true
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="peridot_global-user 15 AQ3A.240912.001 OS2.0.100.0.VNPMIXM release-keys" \
     BuildFingerprint=POCO/peridot_global/peridot:15/AQ3A.240912.001/OS2.0.100.0.VNPMIXM:user/release-keys \
