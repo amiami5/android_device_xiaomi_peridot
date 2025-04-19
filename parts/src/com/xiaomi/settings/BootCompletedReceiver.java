@@ -26,6 +26,7 @@ import com.xiaomi.settings.refreshrate.RefreshUtils;
 import com.xiaomi.settings.touchsampling.TouchSamplingUtils;
 import com.xiaomi.settings.touchsampling.TouchSamplingService;
 import com.xiaomi.settings.touchsampling.TouchSamplingTileService;
+import com.xiaomi.settings.turbocharging.TurboChargingService;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
     private static final String TAG = "XiaomiParts";
@@ -66,6 +67,10 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         // Touch Sampling Tile Service
         context.startServiceAsUser(new Intent(context, TouchSamplingTileService.class),
+                UserHandle.CURRENT);
+
+        // TurboChargingService
+        context.startServiceAsUser(new Intent(context, TurboChargingService.class),
                 UserHandle.CURRENT);
 
         // Override HDR types to enable Dolby Vision

@@ -197,10 +197,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
-# Fastcharge
-PRODUCT_PACKAGES += \
-    vendor.lineage.fastcharge@1.0-service.xiaomi
-
 # Freeform Multiwindow
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.freeform_window_management.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.freeform_window_management.xml
@@ -285,6 +281,7 @@ PRODUCT_PACKAGES += \
     init.qti.media.sh
 
 PRODUCT_PACKAGES += \
+    init.peridot.rc \
     init.qcom.rc \
     init.qti.kernel.rc \
     init.recovery.qcom.rc \
@@ -429,6 +426,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     ApertureOverlayPeridot \
     CarrierConfigOverlayPeridot \
+    FastChargeOverlayPeridot \
     FrameworkOverlayPeridot \
     LineageSDKOverlayPeridot \
     SecureElementOverlayPeridot \
