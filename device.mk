@@ -127,6 +127,10 @@ PRODUCT_VENDOR_PROPERTIES += \
     dalvik.vm.heapminfree?=512k \
     dalvik.vm.heapmaxfree?=8m
 
+# CameraExtensions
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/camerax-vendor-extensions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/camerax-vendor-extensions.xml
+
 # Display
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.composer3-V1-ndk.vendor \
