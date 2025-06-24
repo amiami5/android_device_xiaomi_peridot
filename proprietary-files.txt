@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from peridot OS2.0.102.0.VNPMIXM - miui_PERIDOTGlobal_OS2.0.102.0.VNPMIXM
+# All unpinned blobs below are extracted from peridot OS2.0.105.0.VNPMIXM - miui_PERIDOTGlobal_OS2.0.105.0.VNPMIXM
 
 # ACDB
 odm/etc/acdbdata/Fluence/Fluence_acdb_cal.acdb:odm/etc/acdbdata/cliffs_mtp/Fluence_acdb_cal.acdb
@@ -1659,8 +1659,11 @@ vendor/bin/init.qti.graphics.sh
 vendor/etc/init/init.qti.graphics.rc
 vendor/lib64/egl/eglSubDriverAndroid.so
 vendor/lib64/egl/libEGL_adreno.so;SYMLINK=vendor/lib64/libEGL_adreno.so
+vendor/lib64/egl/libEGL_angle.so
 vendor/lib64/egl/libGLESv1_CM_adreno.so
+vendor/lib64/egl/libGLESv1_CM_angle.so
 vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so
+vendor/lib64/egl/libGLESv2_angle.so
 vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so
 vendor/lib64/egl/libq3dtools_esx.so
 vendor/lib64/hw/vulkan.adreno.so
@@ -2821,6 +2824,7 @@ odm/firmware/haptic_rtp_silk.bin
 
 # WiFi
 vendor/bin/cnss-daemon
+vendor/bin/cnss_diag
 vendor/etc/init/init.vendor.wlan.rc
 vendor/lib64/libcert_parse.wpa_s.so
 vendor/lib64/vendor.qti.hardware.wigig.netperftuner@1.0.so
