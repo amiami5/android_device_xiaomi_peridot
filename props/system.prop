@@ -1,3 +1,6 @@
+# Blur
+ro.sf.blurs_are_expensive=1
+
 # CameraX
 ro.camerax.extensions.enabled=true
 
