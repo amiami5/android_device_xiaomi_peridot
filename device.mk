@@ -73,8 +73,7 @@ PRODUCT_PACKAGES += \
     audio.primary.default \
     audio.bluetooth.default \
     audio.r_submix.default \
-    audio.usb.default \
-    libaudioclient_shim.vendor
+    audio.usb.default
 
 PRODUCT_PACKAGES += \
     libaudiochargerlistener \
@@ -757,17 +756,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.aware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.aware.xml
 
 # WiFi Display
-PRODUCT_PACKAGES += \
-    android.media.audio.common.types-V3-cpp \
-    libdisplayconfig.system.qti \
-    libwfdservice_shim.vendor \
-    libgui_shim \
-    libinput_shim.vendor \
-    libbinder_shim.vendor \
-    libwfdaac_vendor \
-    vendor.display.config@2.0 \
-    vendor.qti.hardware.display.config-V5-ndk
-
 PRODUCT_BOOT_JARS += \
     WfdCommon
 
