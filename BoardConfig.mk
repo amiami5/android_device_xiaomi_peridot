@@ -60,6 +60,9 @@ ART_BUILD_HOST_NDEBUG := true
 ART_BUILD_HOST_DEBUG := false
 endif
 
+# Bootctrl
+PRODUCT_SOONG_NAMESPACES += hardware/qcom-caf/bootctrl
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := pineapple
 TARGET_NO_BOOTLOADER := true
