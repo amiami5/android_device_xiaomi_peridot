@@ -1940,7 +1940,7 @@ vendor/lib64/vendor.qti.hardware.qxr-V1-ndk.so
 vendor/lib64/vendor.qti.qegahal-V1-ndk_platform.so
 
 # RIL - from op5cfbl1 qssi-user-14-UKQ1.231108.001-1717690720477-release-keys
-vendor/lib64/libqcrilNrVoiceModule.so
+vendor/lib64/libqcrilNrVoiceModule.so|c1ec01ba7707a718d352ca6cbf8a8d586b1d8e9e
 
 # RIL
 odm/etc/MESubway_prebuilt.db
