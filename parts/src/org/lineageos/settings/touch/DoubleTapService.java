@@ -1,6 +1,7 @@
 /*
  * Copyright (C) 2025 kenway214
  * Copyright (C) 2025 GuidixX
+ * Copyright (C) 2025 zenin1504
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,6 +34,10 @@ import android.os.ServiceManager;
 public class DoubleTapService extends Service {
     private static final int DOUBLE_TAP_TO_WAKE_MODE = 14;
     private static final int TOUCH_AOD_ENABLE_MODE = 11;
+    
+    // Define the missing constant as a string
+    private static final String DOZE_DOUBLE_TAP_GESTURE_AMBIENT = "doze_double_tap_gesture_ambient";
+    
     private ITouchFeature mTouchFeature;
 
     @Override
@@ -69,7 +74,7 @@ public class DoubleTapService extends Service {
         );
 
         cr.registerContentObserver(
-            Settings.Secure.getUriFor(Settings.Secure.DOZE_DOUBLE_TAP_GESTURE_AMBIENT),
+            Settings.Secure.getUriFor(DOZE_DOUBLE_TAP_GESTURE_AMBIENT), // Use string constant
             true,
             new ContentObserver(new Handler()) {
                 @Override
@@ -102,7 +107,7 @@ public class DoubleTapService extends Service {
         try {
             boolean enabled = Settings.Secure.getInt(
                 getContentResolver(),
-                Settings.Secure.DOZE_DOUBLE_TAP_GESTURE_AMBIENT,
+                DOZE_DOUBLE_TAP_GESTURE_AMBIENT, // Use string constant
                 0
             ) == 1;
             if (mTouchFeature != null) {
