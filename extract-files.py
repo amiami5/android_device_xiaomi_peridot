@@ -31,6 +31,7 @@ namespace_imports = [
     'hardware/lineage/interfaces/power-libperfmgr',
     'hardware/google/interfaces',
     'hardware/google/pixel',
+    'hardware/dolby',
     'hardware/xiaomi',
     'vendor/qcom/opensource/commonsys-intf/display',
     'vendor/qcom/opensource/commonsys/display',

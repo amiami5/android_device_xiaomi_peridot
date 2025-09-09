@@ -84,9 +84,7 @@ vendor/etc/audio/sku_cliffs/resourcemanager_cliffs_mtp_wcd9395.xml
 vendor/etc/audio/sku_cliffs/resourcemanager_cliffs_mtp_wsa883x.xml
 vendor/etc/audio/sku_cliffs/resourcemanager_cliffs_qrd.xml
 vendor/etc/audio_diag.cfg
-vendor/etc/audio_policy_volumes.xml
 vendor/etc/card-defs.xml
-vendor/etc/default_volume_tables.xml
 vendor/etc/kvh2xml.xml
 vendor/etc/microphone_characteristics.xml
 vendor/etc/usecaseKvManager.xml
@@ -162,7 +160,6 @@ vendor/lib64/libcapiv2svarnnvendor.so
 vendor/lib64/libcapiv2udk7vendor.so
 vendor/lib64/libcapiv2uvvendor.so
 vendor/lib64/libcustomva_intf.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libdapparamstorage.so
 vendor/lib64/libhotword_intf.so;MAKE_COPY_RULE_ONLY
 vendor/lib64/libkaraokepal.so;MAKE_COPY_RULE_ONLY
 vendor/lib64/liblx-ar_util.so;MAKE_COPY_RULE_ONLY
@@ -177,7 +174,7 @@ vendor/lib64/libpal_net_if.so
 vendor/lib64/libpalclient.so;MAKE_COPY_RULE_ONLY
 vendor/lib64/libqtigefar.so;MAKE_COPY_RULE_ONLY
 vendor/lib64/libresampler.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libspatializerparamstorage.so
+vendor/lib64/libspatializerparamstorage.so;DISABLE_CHECKELF
 vendor/lib64/libtensorflowlite_c.so
 vendor/lib64/libvui_dmgr.so;MAKE_COPY_RULE_ONLY
 vendor/lib64/libvui_dmgr_client.so;MAKE_COPY_RULE_ONLY

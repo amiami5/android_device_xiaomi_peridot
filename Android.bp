@@ -5,6 +5,7 @@
 
 soong_namespace {
     imports: [
+        "hardware/dolby",
         "hardware/xiaomi",
         "hardware/qcom-caf/bootctrl",
         "hardware/lineage/interfaces/power-libperfmgr",

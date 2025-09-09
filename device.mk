@@ -13,9 +13,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Virtual A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
-# ViperFX
-$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
-
 # Dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-8192-dalvik-heap.mk)
 
@@ -27,6 +24,9 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
 # Reduce system server verbosity
 PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
+
+# Dolby
+$(call inherit-product, hardware/dolby/dolby.mk)
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -93,6 +93,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/resourcemanager_cliffs_mtp.xml:$(TARGET_COPY_OUT_ODM)/etc/audio/sku_cliffs/resourcemanager_cliffs_mtp.xml
 
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
+    $(LOCAL_PATH)/configs/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
+
+PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cliffs/audio_effects.xml \
     $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cliffs/audio_policy_configuration.xml
 
@@ -106,7 +110,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
 
 PRODUCT_COPY_FILES += \
-    hardware/qcom-caf/sm8650/audio/primary-hal/configs/common/codec2/media_codecs_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_audio.xml \
     hardware/qcom-caf/sm8650/audio/primary-hal/configs/common/codec2/service/1.0/c2audio.vendor.base-arm64.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/c2audio.vendor.base-arm64.policy \
     hardware/qcom-caf/sm8650/audio/primary-hal/configs/common/codec2/service/1.0/c2audio.vendor.ext-arm64.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy
 
@@ -418,7 +421,7 @@ PRODUCT_PACKAGES += \
     libstagefright_foundation
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media/media_profiles_cliffs_v0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_cliffs_v0.xml \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 # Memtrack
 PRODUCT_PACKAGES += \
