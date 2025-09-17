@@ -34,7 +34,7 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # Axion stuff
 TARGET_ENABLE_BLUR := true
-PRODUCT_NO_CAMERA := false
+PRODUCT_NO_CAMERA := true
 TARGET_INCLUDES_LOS_PREBUILTS := true
 
 # Camera Flags

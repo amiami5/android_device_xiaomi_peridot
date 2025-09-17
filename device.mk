@@ -28,6 +28,9 @@ PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
 # Dolby
 $(call inherit-product, hardware/dolby/dolby.mk)
 
+# MiuiCamera
+$(call inherit-product-if-exists, device/xiaomi/peridot-miuicamera/device.mk)
+
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \

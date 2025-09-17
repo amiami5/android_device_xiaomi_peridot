@@ -28,6 +28,16 @@ echo "Cloning Dolby Atmos..."
 rm -rf hardware/dolby
 git clone -b 16-oss https://github.com/sm8635-dev/hardware_dolby.git hardware/dolby
 
+# MiuiCamera device tree (fresh clone)
+echo "Cloning MiuiCamera device tree..."
+rm -rf device/xiaomi/peridot-miuicamera
+git clone https://github.com/sm8635-dev/device_xiaomi_peridot-miuicamera.git device/xiaomi/peridot-miuicamera
+
+# MiuiCamera vendor tree (fresh clone)
+echo "Cloning MiuiCamera vendor tree..."
+rm -rf vendor/xiaomi/peridot-miuicamera
+git clone https://github.com/sm8635-dev/vendor_xiaomi_peridot-miuicamera.git vendor/xiaomi/peridot-miuicamera
+
 # Refresh signing keys
 if [ -d vendor/lineage-priv/keys ]; then
   echo "Removing existing signing keys..."
