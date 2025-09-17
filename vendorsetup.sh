@@ -4,8 +4,8 @@
 (
   cd hardware/qcom-caf/sm8650/audio/agm || exit 1
   echo "Fetching AGM updates..."
-  git fetch https://github.com/xiaomi-peridot/vendor_qcom_opensource_agm lineage-22.2-caf-sm8650
-  git reset --hard FETCH_HEAD
+  git fetch https://github.com/sm8635-dev/vendor_qcom_opensource_agm-sm8650 16
+  git cherry-pick be29bcf0c9542a8417199528544f9fbea9c9e015
 )
 
 # Vendor (fresh clone)
