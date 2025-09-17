@@ -1327,8 +1327,8 @@ vendor/lib64/libops.so
 vendor/lib64/libqisl.so
 vendor/lib64/libqwes.so
 vendor/lib64/librpmb.so
-vendor/lib64/libssd.so
 vendor/lib64/libspl.so
+vendor/lib64/libssd.so
 vendor/lib64/vendor.qti.hardware.qseecom-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 
@@ -1613,12 +1613,12 @@ vendor/lib64/hw/libqtigatekeeper.so
 
 # Graphics
 vendor/app/com.qualcomm.qti.gpudrivers.pineapple.api34/com.qualcomm.qti.gpudrivers.pineapple.api34.apk
+vendor/bin/init.qti.graphics.sh
+vendor/etc/init/init.qti.graphics.rc
 vendor/gpu/kbc/sequence_manifest.bin
 vendor/gpu/kbc/unified_kbcs_32.bin
 vendor/gpu/kbc/unified_kbcs_64.bin
 vendor/gpu/kbc/unified_ksqs.bin
-vendor/bin/init.qti.graphics.sh
-vendor/etc/init/init.qti.graphics.rc
 vendor/lib64/egl/eglSubDriverAndroid.so
 vendor/lib64/egl/libEGL_adreno.so;SYMLINK=vendor/lib64/libEGL_adreno.so
 vendor/lib64/egl/libGLESv1_CM_adreno.so
