@@ -14,7 +14,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/vabc_features.mk)
 
 # Dalvik vm configs
-$(call inherit-product, frameworks/native/build/phone-xhdpi-8192-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # pKVM
 $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk)
@@ -477,6 +477,7 @@ PRODUCT_PACKAGES += \
     BluetoothOverlayPeridot \
     CarrierConfigOverlayPeridot \
     FrameworkOverlayPeridot \
+    LineageSDKOverlayPeridot \
     NfcOverlayPeridot \
     SecureElementOverlayPeridot \
     SettingsOverlayPeridot \
@@ -600,6 +601,30 @@ PRODUCT_COPY_FILES += \
 # Telephony
 PRODUCT_PACKAGES += \
     QtiTelephonyCompat
+
+PRODUCT_PACKAGES += \
+    extphonelib \
+    extphonelib-product \
+    extphonelib.xml \
+    extphonelib_product.xml \
+    ims-ext-common \
+    ims_ext_common.xml \
+    qti-telephony-hidl-wrapper \
+    qti-telephony-hidl-wrapper-prd \
+    qti_telephony_hidl_wrapper.xml \
+    qti_telephony_hidl_wrapper_prd.xml \
+    qti-telephony-utils \
+    qti-telephony-utils-prd \
+    qti_telephony_utils.xml \
+    qti_telephony_utils_prd.xml \
+    telephony-ext
+
+PRODUCT_PACKAGES += \
+    xiaomi-telephony-stub
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext \
+    xiaomi-telephony-stub
 
 PRODUCT_PACKAGES += \
     framework-permission-aidl-cpp.vendor

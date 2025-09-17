@@ -80,7 +80,7 @@ BOARD_USES_QCOM_HARDWARE := true
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(DEVICE_PATH)/configs/hidl/compatibility_matrix.device.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-    vendor/yaap/config/device_framework_matrix.xml
+    vendor/lineage/config/device_framework_matrix.xml
 
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/hidl/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += \
@@ -89,9 +89,6 @@ DEVICE_MANIFEST_FILE += \
     hardware/qcom-caf/sm8650/audio/primary-hal/configs/common/manifest_non_qmaa_extn.xml
 
 ODM_MANIFEST_FILES := $(DEVICE_PATH)/configs/hidl/manifest_odm.xml
-
-# Inherit from proprietary files for miuicamera
--include device/xiaomi/peridot-miuicamera/BoardConfig.mk
 
 # Kernel
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
@@ -110,8 +107,8 @@ BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
 
 BOARD_KERNEL_CMDLINE := \
     video=vfb:640x400,bpp=32,memsize=3072000 \
-    swinfo.fingerprint=peridot:$(YAAP_VERSION) \
-    mtdoops.fingerprint=peridot:$(YAAP_VERSION)
+    swinfo.fingerprint=peridot:$(LINEAGE_VERSION) \
+    mtdoops.fingerprint=peridot:$(LINEAGE_VERSION)
 
 BOARD_KERNEL_CMDLINE += rcupdate.rcu_expedited=1 rcu_nocbs=all rcutree.enable_rcu_lazy
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
@@ -150,11 +147,8 @@ BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(patsubst %,$(RAMDISK_MODULES_PATH)
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD  := $(patsubst %,$(RAMDISK_MODULES_PATH)/%,$(shell cat $(RAMDISK_MODULES_PATH)/modules.load.recovery))
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(RAMDISK_MODULES_PATH)/modules.blocklist
 
-# MiuiCamera
-CAMERA_PACKAGE_NAME := com.android.camera
-
 # Partitions
--include vendor/yaap/config/BoardConfigReservedSize.mk
+-include vendor/lineage/config/BoardConfigReservedSize.mk
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
