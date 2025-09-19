@@ -328,7 +328,7 @@ blob_fixups: blob_fixups_user_type = {
             r'.+"libqcodec2_dolbydecoderfilter\.so",.*\n',
             ''
         ),
-}
+}  # fmt: skip
 
 module = ExtractUtilsModule(
     'peridot',
@@ -336,7 +336,7 @@ module = ExtractUtilsModule(
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
-    add_firmware_proprietary_file=False,
+    add_firmware_proprietary_file=True,
 )
 
 if __name__ == '__main__':
