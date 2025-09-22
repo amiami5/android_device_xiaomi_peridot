@@ -16,6 +16,11 @@ git clone -b lineage-23.0 https://github.com/sm8635-dev/kernel_xiaomi_sm8635-mod
 rm -rf kernel/xiaomi/sm8635-devicetrees
 git clone -b lineage-23.0 https://github.com/sm8635-dev/kernel_xiaomi_sm8635-devicetrees.git kernel/xiaomi/sm8635-devicetrees
 
+# Hardware xiaomi (fresh clone)
+echo "Cloning hardware xiaomi source..."
+rm -rf hardware/xiaomi
+git clone -b lineage-23.0 https://github.com/sm8635-dev/hardware_xiaomi.git hardware/xiaomi
+
 # Refresh signing keys
 if [ -d vendor/lineage-priv/keys ]; then
   echo "Removing existing signing keys..."
