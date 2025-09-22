@@ -1,17 +1,20 @@
 #!/bin/bash
 
-# AGM
-(
-  cd hardware/qcom-caf/sm8650/audio/agm || exit 1
-  echo "Fetching AGM updates..."
-  git fetch https://github.com/xiaomi-peridot/vendor_qcom_opensource_agm lineage-22.2-caf-sm8650
-  git reset --hard FETCH_HEAD
-)
-
 # Vendor (fresh clone)
 echo "Cloning vendor tree..."
 rm -rf vendor/xiaomi/peridot
 git clone -b lineage-23.0 https://github.com/sm8635-dev/vendor_xiaomi_peridot.git vendor/xiaomi/peridot
+
+# Kernel source (fresh clone)
+echo "Cloning kernel source tree..."
+rm -rf kernel/xiaomi/sm8635
+git clone -b lineage-23.0 https://github.com/sm8635-dev/kernel_xiaomi_sm8635.git kernel/xiaomi/sm8635
+
+rm -rf kernel/xiaomi/sm8635-modules
+git clone -b lineage-23.0 https://github.com/sm8635-dev/kernel_xiaomi_sm8635-modules.git kernel/xiaomi/sm8635-modules
+
+rm -rf kernel/xiaomi/sm8635-devicetrees
+git clone -b lineage-23.0 https://github.com/sm8635-dev/kernel_xiaomi_sm8635-devicetrees.git kernel/xiaomi/sm8635-devicetrees
 
 # Refresh signing keys
 if [ -d vendor/lineage-priv/keys ]; then
