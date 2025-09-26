@@ -109,6 +109,8 @@ TARGET_KERNEL_CONFIG := \
     vendor/pineapple_GKI.config \
     vendor/peridot_GKI.config
 
+TARGET_KERNEL_CLANG_VERSION := r547379
+
 BOARD_KERNEL_CMDLINE := \
     video=vfb:640x400,bpp=32,memsize=3072000 \
     swinfo.fingerprint=peridot:$(LINEAGE_VERSION) \
