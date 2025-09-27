@@ -31,6 +31,11 @@ echo "Cloning hardware xiaomi source..."
 rm -rf hardware/xiaomi
 git clone -b lineage-23.0 https://github.com/sm8635-dev/hardware_xiaomi.git hardware/xiaomi
 
+# KProfiles (fresh clone)
+echo "Cloning KProfiles..."
+rm -rf packages/apps/KProfiles
+git clone -b lineage-23.0 https://github.com/sm8635-dev/packages_apps_KProfiles.git packages/apps/KProfiles
+
 # Refresh signing keys
 if [ -d vendor/lineage-priv/keys ]; then
   echo "Removing existing signing keys..."
