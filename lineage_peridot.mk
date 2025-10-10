@@ -45,3 +45,7 @@ AXION_PROCESSOR := Snapdragon_8s_Gen_3
 # Scheduler
 PERF_GOV_SUPPORTED := true
 PERF_DEFAULT_GOV := walt
+
+# High Brightness Mode (HBM)
+HBM_SUPPORTED := true
+HBM_NODE := /sys/class/backlight/panel0-backlight/hbm_mode
