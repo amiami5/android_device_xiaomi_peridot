@@ -411,13 +411,13 @@
     {
       "PowerHint": "INTERACTION",
       "Node": "CPUBigPlusClusterMinFreq",
-      "Duration": 1000,
+      "Duration": 700,
       "Value": "2918400"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "CPUBigClusterMinFreq",
-      "Duration": 1000,
+      "Duration": 700,
       "Value": "9999999"
     },
     {
@@ -525,79 +525,79 @@
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUBigClusterMinFreq",
-      "Duration": 5000,
+      "Duration": 3000,
       "Value": "2361600"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPULittleClusterMinFreq",
-      "Duration": 5000,
+      "Duration": 3000,
       "Value": "1843200"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUBigPlusClusterMinFreq",
-      "Duration": 5000,
+      "Duration": 3000,
       "Value": "9999999"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "UclampTAMin",
-      "Duration": 5000,
+      "Duration": 3000,
       "Value": "50"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "UclampFGMin",
-      "Duration": 5000,
+      "Duration": 3000,
       "Value": "50"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUBWHystTriggerCount",
-      "Duration": 5000,
+      "Duration": 3000,
       "Value": "0"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUBWHystLength",
-      "Duration": 5000,
+      "Duration": 3000,
       "Value": "0"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUBWHistMemory",
-      "Duration": 5000,
+      "Duration": 3000,
       "Value": "0"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUBWMinFreq",
-      "Duration": 5000,
+      "Duration": 3000,
       "Value": "3187000"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "L3MinFreq",
-      "Duration": 5000,
+      "Duration": 3000,
       "Value": "1497600"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "GPUIdleTimer",
-      "Duration": 5000,
+      "Duration": 3000,
       "Value": "10000"
     },
 	{
       "PowerHint": "TOUCH_DOWN",
       "Node": "CPULittleClusterMinFreq",
-      "Duration": 100, 
+      "Duration": 60, 
       "Value": "1344000"
     },
     {
       "PowerHint": "TOUCH_DOWN", 
       "Node": "CPUBWMinFreq",
-      "Duration": 100,
+      "Duration": 60,
       "Value": "1555000"
     },
     {
@@ -683,6 +683,42 @@
       "Node": "CPUBWMinFreq",
       "Duration": 80,
       "Value": "1555000"
+    },
+	{
+      "PowerHint": "DEVICE_IDLE",
+      "Node": "CPUBigPlusClusterMinFreq",
+      "Duration": 0,
+      "Value": "480000"
+    },
+    {
+      "PowerHint": "DEVICE_IDLE",
+      "Node": "CPUBigClusterMinFreq",
+      "Duration": 0,
+      "Value": "480000"
+    },
+    {
+      "PowerHint": "DEVICE_IDLE",
+      "Node": "CPULittleClusterMinFreq",
+      "Duration": 0,
+      "Value": "595200"
+    },
+    {
+      "PowerHint": "DEVICE_IDLE",
+      "Node": "GPUMinFreq",
+      "Duration": 0,
+      "Value": "255000000"
+    },
+    {
+      "PowerHint": "DEVICE_IDLE",
+      "Node": "UclampTAMin",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "DEVICE_IDLE",
+      "Node": "UclampFGMin",
+      "Duration": 0,
+      "Value": "0"
     },
     {
       "PowerHint": "Flipendo",
