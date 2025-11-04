@@ -8,25 +8,15 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common InfinityOS stuff.
-$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
+# Inherit some common lineageOS stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from peridot device
 $(call inherit-product, device/xiaomi/peridot/device.mk)
 
-# Infinity Flags
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_INCLUDE_ACCORD := false
-EXTRA_UDFPS_ICONS := true
-TARGET_HAS_UDFPS := true
-INFINITY_BUILD_TYPE := OFFICIAL
-INFINITY_MAINTAINER := Shikhar|Atharva
-TARGET_SUPPORTS_BLUR := true
 
 # Device Flags
-PRODUCT_NAME := infinity_peridot
+PRODUCT_NAME := lineage_peridot
 PRODUCT_DEVICE := peridot
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
@@ -42,3 +32,23 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceProduct=$(PRODUCT_SYSTEM_NAME)
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# Axion stuff
+TARGET_ENABLE_BLUR := true
+PRODUCT_NO_CAMERA := true
+TARGET_INCLUDES_LOS_PREBUILTS := false
+TORCH_STR_SUPPORTED := false
+
+# Camera Flags
+AXION_CAMERA_REAR_INFO := 50,8
+AXION_CAMERA_FRONT_INFO := 20
+AXION_MAINTAINER := amisuke
+AXION_PROCESSOR := Snapdragon_8s_Gen_3
+
+# Scheduler
+PERF_GOV_SUPPORTED := true
+PERF_DEFAULT_GOV := walt
+
+# High Brightness Mode (HBM)
+HBM_SUPPORTED := true
+HBM_NODE := /sys/class/backlight/panel0-backlight/hbm_mode
